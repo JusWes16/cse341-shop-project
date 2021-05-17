@@ -11,19 +11,24 @@
                     <ul class="cart__item-list">
                         <% products.forEach(p => { %>
                             <li class="cart__item">
-                                <img src="<%= p.productData.imageUrl %>" alt="<%= p.productData.title %>">
-                                <h1><%= p.productData.title %></h1>
-                                <h2>$<%= p.productData.price * p.qty %></h2>
-                                <h2>Quantity: <%= p.qty %></h2>
+                                <img src="<%= p.productId.imageUrl %>" alt="<%= p.productId.title %>">
+                                <h1><%= p.productId.title %></h1>
+                                <h2>$<%= p.productId.price * p.quantity %></h2>
+                                <h2>Quantity: <%= p.quantity %></h2>
                                 <form action="/cart-delete-item" method="POST">
-                                    <input type="hidden" value="<%= p.productData.id %>" name="productId">
+                                    <input type="hidden" value="<%= p.productId.id %>" name="productId">
                                     <button class="btn danger" type="submit">Delete</button>
                                 </form>
                             </li>
                         <% }) %>
                     </ul>
                     <hr>
-                    <h2>Total: $<%= cart.totalPrice.toFixed(2) %></h2>
+                    
+                </div>
+                <div class="centered">
+                    <form action="/create-order" method="POST">
+                        <button type="submit" class="btn">Order Now!</button>
+                    </form>
                 </div>
             <% } else { %>
                 <h1>No Products in Cart!</h1>
