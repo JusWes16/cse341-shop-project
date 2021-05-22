@@ -50,6 +50,21 @@ form {
   padding: 0;
 }
 
+.main-header__item button{
+  background-color: #242120;
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-header__item button:hover{
+  color: #e75d5d;
+  cursor: pointer;
+}
+
 .main-header__item a {
   text-decoration: none;
   color: white;
@@ -208,9 +223,27 @@ form {
   color: white;
 }
 
+.user-message{
+  margin: auto;
+  width: 90%;
+  border: 1px solid rgb(4, 4, 153);
+  background-color: rgb(191, 191, 252);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.message-error{
+  border: 1px solid rgb(136, 4, 4);
+  background-color: rgb(241, 137, 137);
+  color: rgb(100, 8, 8);
+}
+
 @media (min-width: 768px) {
   .main-header__nav {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 
   #side-menu-toggle {
@@ -226,4 +259,8 @@ form {
   max-width: 70%;
   margin: 0 auto;
   padding: 10px;
+}
+
+.user-message{
+  width: 30rem;
 }
