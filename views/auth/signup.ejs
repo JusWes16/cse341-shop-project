@@ -10,26 +10,26 @@
         <% if (errorMessage) { %>
             <div class="user-message message-error"><%= errorMessage %></div>
         <% } %>
-        <form class="login-form" action="/signup" method="POST">
+        <form class="login-form" action="/signup" method="POST" novalidate>
             <div class="form-control">
                 <label for="fname">First Name</label>
-                <input type="name" name="fname" id="fname">
+                <input type="name" name="fname" id="fname" value="<%= oldInput.fname %>">
             </div>
             <div class="form-control">
                 <label for="lname">Last Name</label>
-                <input type="name" name="lname" id="lname">
+                <input type="name" name="lname" id="lname" value="<%= oldInput.lname %>">
             </div>
             <div class="form-control">
                 <label for="email">E-Mail</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" value="<%= oldInput.email %>">
             </div>
             <div class="form-control">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" value="<%= oldInput.password %>">
             </div>
             <div class="form-control">
                 <label for="confirmPassword">Confirm Password</label>
-                <input type="password" name="confirmPassword" id="confirmPassword">
+                <input type="password" name="confirmPassword" id="confirmPassword" value="<%= oldInput.confirmPassword %>">
             </div>
             <button class="btn" type="submit">Signup</button>
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
