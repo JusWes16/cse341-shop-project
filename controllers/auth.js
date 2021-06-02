@@ -27,7 +27,7 @@ exports.getLogin = (req, res, next) => {
     }
     res.render('auth/login', {
         path: '/login',
-        pageTitle: 'Login',
+        pageTitle: 'GameCube Center | Login',
         errorMessage: message1,
         successMessage: message2,
         oldInput: { 
@@ -46,7 +46,7 @@ exports.getSignup = (req, res, next) => {
     }
     res.render('auth/signup', {
         path: '/signup',
-        pageTitle: 'Signup',
+        pageTitle: 'GameCube Center | Signup',
         errorMessage: message,
         oldInput: {
             fname: '', 
@@ -209,7 +209,7 @@ exports.getReset = (req, res, next) => {
     }
     res.render('auth/reset', {
         path: '/reset',
-        pageTitle: 'Reset Password',
+        pageTitle: 'GameCube Center | Reset Password',
         errorMessage: message
     });
 };
@@ -257,7 +257,7 @@ exports.getNewPassword = (req, res, next) => {
         .then(user =>{
             res.render('auth/new-password', {
                 path: '/new-password',
-                pageTitle: 'New Password',
+                pageTitle: 'GameCube Center | New Password',
                 errorMessage: message,
                 userId: user._id.toString(),
                 passwordToken: token

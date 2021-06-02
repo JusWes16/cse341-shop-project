@@ -20,14 +20,18 @@ router.post(
         body('title')
             .isAlphanumeric()
             .isLength({min:3})
-            .trim(),
+            .trim()
+            .withMessage('Please enter a title onlt containing letters and numbers and at least 3 characters long.'),
         body('imageUrl')
-            .isURL(),
+            .isURL()
+            .withMessage('Please enter a valid URL.'),
         body('price')
-            .isFloat(),
+            .isFloat()
+            .withMessage('Please enter a valid price.'),
         body('description')
             .isLength({min:3, max: 500})
             .trim()
+            .withMessage('Descriptions must be between 3 and 500 characters long.')
     ], 
     isAuth, 
     adminController.postAddProduct
@@ -39,16 +43,20 @@ router.post(
     '/edit-product',
     [
         body('title')
-            .isString()
+            .isAlphanumeric()
             .isLength({min:3})
-            .trim(),
+            .trim()
+            .withMessage('Please enter a '),
         body('imageUrl')
-            .isURL(),
+            .isURL()
+            .withMessage('Please enter a valid URL.'),
         body('price')
-            .isFloat(),
+            .isFloat()
+            .withMessage('Please enter a valid price.'),
         body('description')
             .isLength({min:3, max: 500})
             .trim()
+            .withMessage('Descriptions must be between 3 and 500 characters long.')
     ],  
     isAuth, 
     adminController.postEditProduct

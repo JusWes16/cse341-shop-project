@@ -15,9 +15,11 @@
                                         <%= product.title %>
                                     </h1>
                                 </header>
-                                <div class="card__image">
-                                    <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
-                                </div>
+                                <a href="/products/<%= product._id %>">
+                                    <div class="card__image">
+                                        <img src="<%= product.imageUrl %>" alt="<%= product.title %>">
+                                    </div>
+                                </a>
                                 <div class="card__content">
                                     <h2 class="product__price">$<%= product.price %></h2>
                                     <p class="product__description">

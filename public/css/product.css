@@ -18,10 +18,14 @@
 
 .product__price {
     text-align: center;
-    color: #4d4d4d;
+    color: #e75d5d;
     margin-bottom: 0.5rem;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px rgb(44, 44, 44);
 }
 
 .product__description {
     text-align: center;
+    height: 175px;
+    padding-top: 20px;
 }

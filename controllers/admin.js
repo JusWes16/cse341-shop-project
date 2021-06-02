@@ -3,7 +3,7 @@ const { validationResult } = require('express-validator/check');
 
 exports.getAddProduct = (req, res, next) => {
     res.render('admin/edit-product', {
-      pageTitle: 'Add Product', 
+      pageTitle: 'GameCube Center | Add Product',
       path: '/admin/add-product',
       editing: false,
       hasError: false,
@@ -67,7 +67,7 @@ exports.getEditProduct = (req, res, next) => {
         return res.redirect('/');
       }
       res.render('admin/edit-product', {
-        pageTitle: 'Edit Product',
+        pageTitle: 'GameCube Center | Edit Product', 
         path: '/admin/edit-product',
         editing: editMode,
         product: product,
@@ -135,7 +135,7 @@ exports.getProducts = (req, res, next) => {
     .then(products => {
       res.render('admin/products', {
         prods: products,
-        pageTitle: 'Admin Products',
+        pageTitle: 'GameCube Center | Admin Products',
         path: '/admin/products'
       });
     })

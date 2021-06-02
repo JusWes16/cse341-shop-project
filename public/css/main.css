@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  /* background-color: rgb(78, 78, 78); */
 }
 
 main {
@@ -161,7 +162,12 @@ form {
 }
 
 .card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 4px 8px black;
+  background-color: white;
+}
+
+.card__header {
+  height: 80px;
 }
 
 .card__header,
@@ -178,6 +184,9 @@ form {
 
 .card__image {
   width: 100%;
+  height: 450px;
+  display: block;
+  margin-top: auto;
 }
 
 .card__image img {
